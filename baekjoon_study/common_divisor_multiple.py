@@ -6,6 +6,9 @@
  4, 나머지가 0이 되었을 때의 몫이 최대공
 '''
 
+from tkinter import MULTIPLE
+
+
 def common_divisior(input1, input2):
     max_input = max(input1,input2)
     min_input = min(input1, input2)
@@ -25,7 +28,13 @@ def common_divisior(input1, input2):
         greatest  = max_input/(max_input/min_input)
         remain = max_input%min_input
 
+def common_multiple(input1, input2):
+    mul = input1*input2
+    greatest = common_divisior(input1, input2)
+    atleast = mul/greatest
+    return int(atleast)
+
 x1 = int(input("정수를 입력하세요:"))
 x2 = int(input("정수를 입력하세요:"))
-print(common_divisior(x1,x2)) 
-
+print("최대 공약수", common_divisior(x1,x2)) 
+print("최소 공배수", common_multiple(x1,x2)) 
