@@ -20,13 +20,12 @@ def common_divisior(input1, input2):
     while(True):
         if (remain == 0):
             return int(greatest)
-        print(min_input, remain)
         max_input = max(min_input, remain)
         min_input = min(remain, min_input)
-        greatest  = max_input/min_input
+        greatest  = max_input/(max_input/min_input)
         remain = max_input%min_input
 
 x1 = int(input("정수를 입력하세요:"))
 x2 = int(input("정수를 입력하세요:"))
-print(common_divisior(x1,x2))
+print(common_divisior(x1,x2)) 
 
