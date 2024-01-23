@@ -11,16 +11,20 @@ def common_divisior(input1, input2):
     min_input = min(input1, input2)
     
     remain = max_input%min_input
-    greatest  = max_input/min_input
+    if (remain == 0):
+        greatest  = min_input
+        return int(greatest)
+    else:
+        greatest  = max_input/min_input
 
     while(True):
         if (remain == 0):
-            break
-        max_input = min_input
-        min_input = remain
+            return int(greatest)
+        print(min_input, remain)
+        max_input = max(min_input, remain)
+        min_input = min(remain, min_input)
         greatest  = max_input/min_input
         remain = max_input%min_input
-    return int(greatest)
 
 x1 = int(input("정수를 입력하세요:"))
 x2 = int(input("정수를 입력하세요:"))
