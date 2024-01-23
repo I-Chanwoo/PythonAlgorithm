@@ -5,8 +5,6 @@
  3. 나머지가 0이 될 때까지 1, 2 반복
  4, 나머지가 0이 되었을 때의 몫이 최대공
 '''
-
-
 def common_divisior(input1, input2):
     max_input = max(input1,input2)
     min_input = min(input1, input2)
